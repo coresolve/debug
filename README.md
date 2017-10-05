@@ -4,7 +4,9 @@ This is meant to be used as a debug container.
 
 You can invoke it with:
 
-`kubectl run debug -ti --image=quay.io/dcooley/debug:latest --restart=Never --image-pull-policy=Always -- /bin/bash`
+``` bash
+kubectl run debug -ti --image=quay.io/dcooley/debug:latest --restart=Never --image-pull-policy=Always -- /bin/bash
+```
 
 When you exit the container you can reconnect with:
 
