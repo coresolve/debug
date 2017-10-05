@@ -16,4 +16,13 @@ When finished you can delete it with:
 
 There is a recent version of kubectl on the pod as well as curl dig bash and tshark.
 
+If you want kubectl to do useful things you will want to create a reasonable service account and role binding. 
+For example:
+
+`kubectl create serviceaccount debug`
+`kubectl create clusterrolebinding debug --clusterrole=admin --serviceaccount=default:debug`
+`kubectl run debug -ti --image=quay.io/dcooley/debug --image-pull-policy=Always --overrides='{ "spec": { "serviceAccountName": "debug" } }'   --restart=Never -- /bin/bash`
+
+
+
 Have a bunch of fun!
