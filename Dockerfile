@@ -12,4 +12,4 @@ RUN set -x && \
     # Basic check it works.
     kubectl version --client
 
-CMD ["sleep", "infinity"]
+CMD ["sleep", "86500"]
