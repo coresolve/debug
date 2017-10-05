@@ -1,1 +1,19 @@
-This is a jumphost with reasonable tools.
+[![Docker Repository on Quay](https://quay.io/repository/dcooley/debug/status "Docker Repository on Quay")](https://quay.io/repository/dcooley/debug)
+
+This is meant to be used as a debug container.
+
+You can invoke it with:
+
+`kubectl run debug -ti --image=quay.io/dcooley/debug:latest --restart=Never --image-pull-policy=Always -- /bin/bash`
+
+When you exit the container you can reconnect with:
+
+`kubectl exec -ti debug -- /bin/bash`
+
+When finished you can delete it with:
+
+`kubectl delete pod debug`
+
+There is a recent version of kubectl on the pod as well as curl dig bash and tshark.
+
+Have a bunch of fun!
