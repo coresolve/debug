@@ -1,5 +1,5 @@
 FROM gliderlabs/alpine:latest
-ADD https://storage.googleapis.com/kubernetes-release/release/v1.6.4/bin/linux/amd64/kubectl /usr/local/bin/kubectl
+ADD https://storage.googleapis.com/kubernetes-release/release/v1.7.7/bin/linux/amd64/kubectl /usr/local/bin/kubectl
 RUN apk-install tshark bash iputils bind-tools curl ca-certificates
 ENV HOME=/config
 RUN set -x && \
