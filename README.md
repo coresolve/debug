@@ -14,7 +14,7 @@ When finished you can delete it with:
 
 `kubectl delete pod debug`
 
-There is a recent version of kubectl on the pod as well as curl dig bash and tshark.
+There is a recent version of kubectl on the pod as well as `curl` `dig` `bash` and `tshark`.
 
 If you want kubectl to do useful things you will want to create a reasonable service account and role binding. 
 For example:
