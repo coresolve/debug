@@ -4,7 +4,9 @@ This is meant to be used as a debug container.
 
 You can invoke it with:
 
-`kubectl run debug -ti --image=quay.io/dcooley/debug:latest --restart=Never --image-pull-policy=Always -- /bin/bash`
+``` bash
+kubectl run debug -ti --image=quay.io/dcooley/debug:latest --restart=Never --image-pull-policy=Always -- /bin/bash
+```
 
 When you exit the container you can reconnect with:
 
@@ -14,7 +16,7 @@ When finished you can delete it with:
 
 `kubectl delete pod debug`
 
-There is a recent version of kubectl on the pod as well as curl dig bash and tshark.
+There is a recent version of kubectl on the pod as well as `curl` `dig` `bash` and `tshark`.
 
 If you want kubectl to do useful things you will want to create a reasonable service account and role binding. 
 For example:
